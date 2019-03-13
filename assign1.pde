@@ -69,7 +69,7 @@ void draw(){
   
   //soldier animation
   image(soldierImg, xSoldier, ySoldier);
-  xSoldier ++;
+  xSoldier += 3;
   xSoldier %= 640;
   
 }
