@@ -58,8 +58,9 @@ void draw(){
   //robot animation
   stroke(255, 0, 0);
   strokeWeight(10);
-  line(xBullet, yBullet, xBullet+bulletLength, yBullet);
   image(robotImg, xRobot, yRobot);
+  line(xBullet, yBullet, xBullet+bulletLength, yBullet);
+
   if(xBullet >= xRobot-160){
     xBullet -= 2;
     bulletLength += 2;
