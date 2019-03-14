@@ -1,5 +1,6 @@
 PImage bgImg, groundhogImg, lifeImg, robotImg, soilImg, soldierImg;
 int xSoldier, ySoldier, xRobot, yRobot, rowSoldier, rowRobot, xBullet, yBullet;
+float bulletLength;
 
 void setup(){
   size(640,480);
@@ -57,13 +58,18 @@ void draw(){
   //robot animation
   stroke(255, 0, 0);
   strokeWeight(10);
-  line(xBullet, yBullet, xBullet+40, yBullet);
+  line(xBullet, yBullet, xBullet+bulletLength, yBullet);
   image(robotImg, xRobot, yRobot);
   if(xBullet >= xRobot-160){
     xBullet -= 2;
+    bulletLength += 2;
+    if(bulletLength >= 40){
+      bulletLength = 40;
+    }
   }
   else{
     xBullet = xRobot+25;
+    bulletLength = 0;
   }
   
   
