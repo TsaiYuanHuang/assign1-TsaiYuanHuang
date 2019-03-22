@@ -16,7 +16,7 @@ void setup(){
   //add initial values to variables
   rowSoldier = floor(random(2,6));
   rowRobot = floor(random(2,6));
-  xSoldier = 0;
+  xSoldier = -80;
   ySoldier = 80* rowSoldier;
   xRobot = 160 + floor(random(0,381)); 
   // 640-(160+10)=380; robot's width is about 10 pixels
